@@ -1,0 +1,1637 @@
+FROM courses JOIN enrollments ON courses.id = enrollments.course_id 
+WHERE enrollments.student_id = $1::INTEGER
+2025-02-18 11:02:35,185 - sqlalchemy.engine.Engine - INFO - [cached since 5.668s ago] (9,)
+2025-02-18 11:02:35,188 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-18 11:02:35,189 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/students/9/courses/
+2025-02-18 11:02:43,051 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/8/courses/
+2025-02-18 11:02:43,053 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-18 11:02:43,053 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+2025-02-20 22:56:06,268 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-20 22:56:06,268 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-20 22:56:06,284 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-20 22:56:06,284 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-20 22:56:06,288 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-20 22:56:06,289 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-20 22:56:06,293 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-20 22:56:06,300 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+2025-02-20 22:56:06,268 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-23 22:56:06,268 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 22:56:06,284 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-23 22:56:06,284 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 22:56:06,288 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-23 22:56:06,289 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 22:56:06,293 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 22:56:06,300 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:56:06,305 - sqlalchemy.engine.Engine - INFO - [generated in 0.00444s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:56:06,315 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:56:06,317 - sqlalchemy.engine.Engine - INFO - [cached since 0.01709s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:56:06,321 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:56:06,325 - sqlalchemy.engine.Engine - INFO - [cached since 0.02427s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:56:06,325 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:56:06,331 - sqlalchemy.engine.Engine - INFO - [cached since 0.03003s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:56:06,333 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-23 22:56:23,141 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-23 22:56:23,141 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 22:56:23,145 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-23 22:56:23,145 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 22:56:23,149 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-23 22:56:23,149 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 22:56:23,154 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 22:56:23,155 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:56:23,164 - sqlalchemy.engine.Engine - INFO - [generated in 0.00365s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:56:23,172 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:56:23,175 - sqlalchemy.engine.Engine - INFO - [cached since 0.01454s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:56:23,176 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:56:23,179 - sqlalchemy.engine.Engine - INFO - [cached since 0.02062s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:56:23,183 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:56:23,185 - sqlalchemy.engine.Engine - INFO - [cached since 0.0259s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:56:23,190 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-23 22:57:12,934 - logging_config - INFO - Incoming request: GET http://localhost:8000/
+2025-02-23 22:57:12,937 - logging_config - INFO - Response status: 200 for GET http://localhost:8000/
+2025-02-23 22:57:13,173 - logging_config - INFO - Incoming request: GET http://localhost:8000/favicon.ico
+2025-02-23 22:57:13,173 - logging_config - INFO - Response status: 404 for GET http://localhost:8000/favicon.ico
+2025-02-23 22:58:31,351 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-23 22:58:31,351 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 22:58:31,358 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-23 22:58:31,358 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 22:58:31,363 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-23 22:58:31,364 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 22:58:31,366 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 22:58:31,376 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:58:31,381 - sqlalchemy.engine.Engine - INFO - [generated in 0.00530s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:58:31,392 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:58:31,395 - sqlalchemy.engine.Engine - INFO - [cached since 0.01998s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:58:31,398 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:58:31,402 - sqlalchemy.engine.Engine - INFO - [cached since 0.02564s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:58:31,403 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 22:58:31,406 - sqlalchemy.engine.Engine - INFO - [cached since 0.03089s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 22:58:31,410 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-23 22:58:47,480 - logging_config - INFO - Incoming request: GET http://localhost:8000/
+2025-02-23 22:58:47,481 - logging_config - INFO - Response status: 200 for GET http://localhost:8000/
+2025-02-23 23:03:32,352 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-23 23:03:32,359 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:03:32,361 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-23 23:03:32,361 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:03:32,367 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-23 23:03:32,367 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:03:32,369 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:03:32,376 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:03:32,376 - sqlalchemy.engine.Engine - INFO - [generated in 0.00224s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:03:32,376 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:03:32,376 - sqlalchemy.engine.Engine - INFO - [cached since 0.01047s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:03:32,389 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:03:32,391 - sqlalchemy.engine.Engine - INFO - [cached since 0.01534s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:03:32,393 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:03:32,395 - sqlalchemy.engine.Engine - INFO - [cached since 0.01946s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:03:32,398 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-23 23:04:26,343 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-23 23:04:26,343 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:04:26,358 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-23 23:04:26,358 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:04:26,364 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-23 23:04:26,366 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:04:26,367 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:04:26,374 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:04:26,377 - sqlalchemy.engine.Engine - INFO - [generated in 0.00268s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:04:26,385 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:04:26,387 - sqlalchemy.engine.Engine - INFO - [cached since 0.01274s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:04:26,389 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:04:26,392 - sqlalchemy.engine.Engine - INFO - [cached since 0.01799s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:04:26,395 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:04:26,398 - sqlalchemy.engine.Engine - INFO - [cached since 0.02346s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:04:26,400 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-23 23:41:35,317 - logging_config - INFO - Incoming request: GET http://test/
+2025-02-23 23:41:35,317 - logging_config - INFO - Response status: 200 for GET http://test/
+2025-02-23 23:41:35,317 - httpx - INFO - HTTP Request: GET http://test/ "HTTP/1.1 200 OK"
+2025-02-23 23:41:35,336 - logging_config - INFO - Incoming request: POST http://test/students/
+2025-02-23 23:41:35,336 - logging_config - INFO - Response status: 401 for POST http://test/students/
+2025-02-23 23:41:35,336 - httpx - INFO - HTTP Request: POST http://test/students/ "HTTP/1.1 401 Unauthorized"
+2025-02-23 23:41:35,828 - logging_config - INFO - Incoming request: POST http://test/students/
+2025-02-23 23:41:35,834 - logging_config - INFO - Response status: 401 for POST http://test/students/
+2025-02-23 23:41:35,834 - httpx - INFO - HTTP Request: POST http://test/students/ "HTTP/1.1 401 Unauthorized"
+2025-02-23 23:44:01,933 - logging_config - INFO - Incoming request: GET http://test/
+2025-02-23 23:44:01,933 - logging_config - INFO - Response status: 200 for GET http://test/
+2025-02-23 23:44:01,933 - httpx - INFO - HTTP Request: GET http://test/ "HTTP/1.1 200 OK"
+2025-02-23 23:44:02,371 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-23 23:44:02,406 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-23 23:44:02,408 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-23 23:44:02,408 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-23 23:44:02,712 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-23 23:44:02,712 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:44:02,715 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-23 23:44:02,715 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:44:02,719 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-23 23:44:02,719 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:44:02,719 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:44:02,724 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-23 23:44:02,724 - sqlalchemy.engine.Engine - INFO - [generated in 0.00072s] ('testuser',)
+2025-02-23 23:44:02,744 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-23 23:44:02,744 - logging_config - INFO - Response status: 401 for POST http://test/login/
+2025-02-23 23:44:02,744 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 401 Unauthorized"
+2025-02-23 23:44:02,765 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-23 23:44:02,765 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-23 23:44:02,765 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-23 23:44:02,765 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-23 23:44:02,781 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:44:02,781 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-23 23:44:02,781 - sqlalchemy.engine.Engine - INFO - [cached since 0.04926s ago] ('testuser2',)
+2025-02-23 23:44:02,781 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-23 23:44:02,784 - logging_config - INFO - Response status: 401 for POST http://test/login/
+2025-02-23 23:44:02,784 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 401 Unauthorized"
+2025-02-23 23:44:38,919 - logging_config - INFO - Incoming request: GET http://test/
+2025-02-23 23:44:38,919 - logging_config - INFO - Response status: 200 for GET http://test/
+2025-02-23 23:44:38,919 - httpx - INFO - HTTP Request: GET http://test/ "HTTP/1.1 200 OK"
+2025-02-23 23:44:39,386 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-23 23:44:39,400 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-23 23:44:39,401 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-23 23:44:39,401 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-23 23:44:39,700 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-23 23:44:39,700 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:44:39,704 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-23 23:44:39,706 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:44:39,706 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-23 23:44:39,706 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:44:39,710 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:44:39,720 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-23 23:44:39,720 - sqlalchemy.engine.Engine - INFO - [generated in 0.00078s] ('testuser',)
+2025-02-23 23:44:39,726 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-23 23:44:39,726 - logging_config - INFO - Response status: 401 for POST http://test/login/
+2025-02-23 23:44:39,726 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 401 Unauthorized"
+2025-02-23 23:44:39,745 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-23 23:44:39,745 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-23 23:44:39,745 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-23 23:44:39,745 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-23 23:44:39,745 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:44:39,745 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-23 23:44:39,745 - sqlalchemy.engine.Engine - INFO - [cached since 0.03478s ago] ('apurva',)
+2025-02-23 23:44:39,770 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-23 23:44:40,282 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-23 23:44:40,285 - logging_config - INFO - Response status: 200 for POST http://test/login/
+2025-02-23 23:44:40,286 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 200 OK"
+2025-02-23 23:44:40,286 - logging_config - INFO - Incoming request: POST http://test/students/
+2025-02-23 23:44:40,290 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:44:40,290 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-23 23:44:40,290 - sqlalchemy.engine.Engine - INFO - [cached since 0.5709s ago] ('apurva',)
+2025-02-23 23:44:40,306 - sqlalchemy.engine.Engine - INFO - INSERT INTO students (name, age, email) VALUES ($1::VARCHAR, $2::INTEGER, $3::VARCHAR) RETURNING students.id
+2025-02-23 23:44:40,306 - sqlalchemy.engine.Engine - INFO - [generated in 0.00062s] ('Jane Doe', 22, 'jane@example.com')
+2025-02-23 23:44:40,330 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-23 23:44:40,333 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:44:40,333 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-23 23:44:40,333 - sqlalchemy.engine.Engine - INFO - [generated in 0.00051s] (4,)
+2025-02-23 23:44:40,339 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-23 23:44:40,339 - logging_config - INFO - Response status: 201 for POST http://test/students/
+2025-02-23 23:44:40,342 - httpx - INFO - HTTP Request: POST http://test/students/ "HTTP/1.1 201 Created"
+2025-02-23 23:44:40,343 - logging_config - INFO - Incoming request: GET http://test/students/4
+2025-02-23 23:44:40,344 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:44:40,344 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-23 23:44:40,344 - sqlalchemy.engine.Engine - INFO - [cached since 0.6238s ago] ('apurva',)
+2025-02-23 23:44:40,348 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-23 23:44:40,348 - sqlalchemy.engine.Engine - INFO - [generated in 0.00038s] (4,)
+2025-02-23 23:44:40,349 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-23 23:44:40,349 - logging_config - INFO - Response status: 200 for GET http://test/students/4
+2025-02-23 23:44:40,352 - httpx - INFO - HTTP Request: GET http://test/students/4 "HTTP/1.1 200 OK"
+2025-02-23 23:45:28,049 - logging_config - INFO - Incoming request: GET http://test/
+2025-02-23 23:45:28,049 - logging_config - INFO - Response status: 200 for GET http://test/
+2025-02-23 23:45:28,049 - httpx - INFO - HTTP Request: GET http://test/ "HTTP/1.1 200 OK"
+2025-02-23 23:45:28,063 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-23 23:45:28,065 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-23 23:45:28,065 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-23 23:45:28,065 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-23 23:45:28,356 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-23 23:45:28,356 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:45:28,371 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-23 23:45:28,371 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:45:28,371 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-23 23:45:28,371 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:45:28,371 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:45:28,387 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-23 23:45:28,387 - sqlalchemy.engine.Engine - INFO - [generated in 0.00098s] ('testuser',)
+2025-02-23 23:45:28,387 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-23 23:45:28,387 - logging_config - INFO - Response status: 401 for POST http://test/login/
+2025-02-23 23:45:28,387 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 401 Unauthorized"
+2025-02-23 23:45:28,958 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-23 23:45:28,958 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-23 23:45:28,958 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-23 23:45:28,958 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-23 23:45:28,972 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:45:28,972 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-23 23:45:28,972 - sqlalchemy.engine.Engine - INFO - [cached since 0.5855s ago] ('apurva',)
+2025-02-23 23:45:28,974 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-23 23:45:29,477 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-23 23:45:29,477 - logging_config - INFO - Response status: 200 for POST http://test/login/
+2025-02-23 23:45:29,477 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 200 OK"
+2025-02-23 23:45:29,477 - logging_config - INFO - Incoming request: POST http://test/students/
+2025-02-23 23:45:29,477 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:45:29,493 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-23 23:45:29,493 - sqlalchemy.engine.Engine - INFO - [cached since 1.106s ago] ('apurva',)
+2025-02-23 23:45:29,511 - sqlalchemy.engine.Engine - INFO - INSERT INTO students (name, age, email) VALUES ($1::VARCHAR, $2::INTEGER, $3::VARCHAR) RETURNING students.id
+2025-02-23 23:45:29,511 - sqlalchemy.engine.Engine - INFO - [generated in 0.00051s] ('Jane Doe', 22, 'jane@example.com')
+2025-02-23 23:45:29,511 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-23 23:45:49,748 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-23 23:45:49,748 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:45:49,752 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-23 23:45:49,752 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:45:49,756 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-23 23:45:49,756 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:45:49,759 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:45:49,762 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:45:49,769 - sqlalchemy.engine.Engine - INFO - [generated in 0.00282s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:45:49,786 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:45:49,787 - sqlalchemy.engine.Engine - INFO - [cached since 0.02163s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:45:49,790 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:45:49,793 - sqlalchemy.engine.Engine - INFO - [cached since 0.02655s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:45:49,795 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:45:49,798 - sqlalchemy.engine.Engine - INFO - [cached since 0.03151s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:45:49,800 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-23 23:45:54,677 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-23 23:45:54,677 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-23 23:45:54,781 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-23 23:45:54,816 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-23 23:46:10,987 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-23 23:46:11,000 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:46:11,015 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-23 23:46:11,018 - sqlalchemy.engine.Engine - INFO - [generated in 0.00214s] ('apurva',)
+2025-02-23 23:46:11,028 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-23 23:46:11,560 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-23 23:46:11,561 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-23 23:47:14,766 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/students/
+2025-02-23 23:47:14,770 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:47:14,772 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-23 23:47:14,773 - sqlalchemy.engine.Engine - INFO - [cached since 63.76s ago] ('apurva',)
+2025-02-23 23:47:14,874 - sqlalchemy.engine.Engine - INFO - INSERT INTO students (name, age, email) VALUES ($1::VARCHAR, $2::INTEGER, $3::VARCHAR) RETURNING students.id
+2025-02-23 23:47:14,889 - sqlalchemy.engine.Engine - INFO - [generated in 0.01088s] ('sanika kulkarni', 22, 'sanika@gmail.com')
+2025-02-23 23:47:14,901 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-23 23:47:14,906 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:47:14,906 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-23 23:47:14,906 - sqlalchemy.engine.Engine - INFO - [generated in 0.00206s] (6,)
+2025-02-23 23:47:14,922 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-23 23:47:14,922 - logging_config - INFO - Response status: 201 for POST http://127.0.0.1:8000/students/
+2025-02-23 23:49:49,363 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-23 23:49:49,363 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:49:49,363 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-23 23:49:49,363 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:49:49,373 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-23 23:49:49,374 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-23 23:49:49,377 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-23 23:49:49,385 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:49:49,389 - sqlalchemy.engine.Engine - INFO - [generated in 0.00292s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:49:49,397 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:49:49,398 - sqlalchemy.engine.Engine - INFO - [cached since 0.0142s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:49:49,398 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:49:49,405 - sqlalchemy.engine.Engine - INFO - [cached since 0.01916s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:49:49,407 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-23 23:49:49,409 - sqlalchemy.engine.Engine - INFO - [cached since 0.02391s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-23 23:49:49,411 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-24 16:38:46,308 - logging_config - INFO - Incoming request: GET http://test/
+2025-02-24 16:38:46,308 - logging_config - INFO - Response status: 200 for GET http://test/
+2025-02-24 16:38:46,308 - httpx - INFO - HTTP Request: GET http://test/ "HTTP/1.1 200 OK"
+2025-02-24 16:38:46,322 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-24 16:38:46,322 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-24 16:38:46,322 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-24 16:38:46,322 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-24 16:38:46,454 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-24 16:38:46,454 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:38:46,454 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-24 16:38:46,454 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:38:46,454 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-24 16:38:46,454 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:38:46,454 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:38:46,465 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:38:46,465 - sqlalchemy.engine.Engine - INFO - [generated in 0.00039s] ('testuser',)
+2025-02-24 16:38:46,470 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:38:46,470 - logging_config - INFO - Response status: 401 for POST http://test/login/
+2025-02-24 16:38:46,470 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 401 Unauthorized"
+2025-02-24 16:38:46,679 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-24 16:38:46,679 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-24 16:38:46,679 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-24 16:38:46,679 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-24 16:38:46,679 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:38:46,679 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:38:46,679 - sqlalchemy.engine.Engine - INFO - [cached since 0.2251s ago] ('apurva',)
+2025-02-24 16:38:46,698 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-24 16:38:46,921 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:38:46,921 - logging_config - INFO - Response status: 200 for POST http://test/login/
+2025-02-24 16:38:46,921 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 200 OK"
+2025-02-24 16:38:46,936 - logging_config - INFO - Incoming request: POST http://test/students/
+2025-02-24 16:38:46,936 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:38:46,936 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:38:46,936 - sqlalchemy.engine.Engine - INFO - [cached since 0.4711s ago] ('apurva',)
+2025-02-24 16:38:46,936 - sqlalchemy.engine.Engine - INFO - INSERT INTO students (name, age, email) VALUES ($1::VARCHAR, $2::INTEGER, $3::VARCHAR) RETURNING students.id
+2025-02-24 16:38:46,936 - sqlalchemy.engine.Engine - INFO - [generated in 0.00021s] ('Apurva Bidkar', 22, 'apurva@gmail.com')
+2025-02-24 16:38:46,952 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-24 16:38:46,952 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:38:46,952 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-24 16:38:46,952 - sqlalchemy.engine.Engine - INFO - [generated in 0.00017s] (7,)
+2025-02-24 16:38:46,952 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:38:46,952 - logging_config - INFO - Response status: 201 for POST http://test/students/
+2025-02-24 16:38:46,952 - httpx - INFO - HTTP Request: POST http://test/students/ "HTTP/1.1 201 Created"
+2025-02-24 16:38:46,952 - logging_config - INFO - Incoming request: GET http://test/students/7
+2025-02-24 16:38:46,952 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:38:46,952 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:38:46,952 - sqlalchemy.engine.Engine - INFO - [cached since 0.4905s ago] ('apurva',)
+2025-02-24 16:38:46,952 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-24 16:38:46,952 - sqlalchemy.engine.Engine - INFO - [generated in 0.00016s] (7,)
+2025-02-24 16:38:46,952 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:38:46,952 - logging_config - INFO - Response status: 200 for GET http://test/students/7
+2025-02-24 16:38:46,952 - httpx - INFO - HTTP Request: GET http://test/students/7 "HTTP/1.1 200 OK"
+2025-02-24 16:39:19,128 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-24 16:39:19,128 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:39:19,128 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-24 16:39:19,131 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:39:19,133 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-24 16:39:19,133 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:39:19,135 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:39:19,139 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:39:19,140 - sqlalchemy.engine.Engine - INFO - [generated in 0.00147s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:39:19,144 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:39:19,147 - sqlalchemy.engine.Engine - INFO - [cached since 0.007845s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:39:19,147 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:39:19,148 - sqlalchemy.engine.Engine - INFO - [cached since 0.01037s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:39:19,150 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:39:19,151 - sqlalchemy.engine.Engine - INFO - [cached since 0.01282s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:39:19,152 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-24 16:39:26,131 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-24 16:39:26,132 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-24 16:39:26,245 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-24 16:39:26,263 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-24 16:40:16,715 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/register/
+2025-02-24 16:40:16,729 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:40:16,784 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:40:16,785 - sqlalchemy.engine.Engine - INFO - [generated in 0.00149s] ('jayesh',)
+2025-02-24 16:40:16,791 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-24 16:40:17,050 - sqlalchemy.engine.Engine - INFO - INSERT INTO users (username, email, hashed_password) VALUES ($1::VARCHAR, $2::VARCHAR, $3::VARCHAR) RETURNING users.id
+2025-02-24 16:40:17,050 - sqlalchemy.engine.Engine - INFO - [generated in 0.00096s] ('jayesh', 'jayesh@gmail.com', '$2b$12$Qs6.jV/9BkQJ4FlG0YrfyuXH0tIz5ueB885HDaczmR1sONYNrWsJ.')
+2025-02-24 16:40:17,068 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-24 16:40:17,070 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:40:17,071 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.id = $1::INTEGER
+2025-02-24 16:40:17,071 - sqlalchemy.engine.Engine - INFO - [generated in 0.00103s] (2,)
+2025-02-24 16:40:17,075 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:40:17,076 - logging_config - INFO - Response status: 201 for POST http://127.0.0.1:8000/register/
+2025-02-24 16:40:37,166 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-24 16:40:37,169 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:40:37,169 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:40:37,169 - sqlalchemy.engine.Engine - INFO - [cached since 20.39s ago] ('jayesh',)
+2025-02-24 16:40:37,398 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:40:37,398 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-24 16:41:06,640 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-24 16:41:06,643 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:41:06,643 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:41:06,643 - sqlalchemy.engine.Engine - INFO - [cached since 49.86s ago] ('jayesh',)
+2025-02-24 16:41:06,886 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:41:06,887 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-24 16:41:37,196 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-24 16:41:37,196 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:41:37,200 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-24 16:41:37,200 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:41:37,201 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-24 16:41:37,201 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:41:37,203 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:41:37,206 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:41:37,207 - sqlalchemy.engine.Engine - INFO - [generated in 0.00109s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:41:37,210 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:41:37,211 - sqlalchemy.engine.Engine - INFO - [cached since 0.005496s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:41:37,213 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:41:37,213 - sqlalchemy.engine.Engine - INFO - [cached since 0.007922s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:41:37,215 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:41:37,216 - sqlalchemy.engine.Engine - INFO - [cached since 0.009765s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:41:37,216 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-24 16:41:53,790 - logging_config - INFO - Incoming request: GET http://test/
+2025-02-24 16:41:53,790 - logging_config - INFO - Response status: 200 for GET http://test/
+2025-02-24 16:41:53,790 - httpx - INFO - HTTP Request: GET http://test/ "HTTP/1.1 200 OK"
+2025-02-24 16:41:53,796 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-24 16:41:53,801 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-24 16:41:53,801 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-24 16:41:53,801 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-24 16:41:53,908 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-24 16:41:53,908 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:41:53,920 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-24 16:41:53,921 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:41:53,921 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-24 16:41:53,922 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:41:53,922 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:41:53,926 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:41:53,926 - sqlalchemy.engine.Engine - INFO - [generated in 0.00040s] ('testuser',)
+2025-02-24 16:41:53,926 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:41:53,932 - logging_config - INFO - Response status: 401 for POST http://test/login/
+2025-02-24 16:41:53,932 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 401 Unauthorized"
+2025-02-24 16:41:54,137 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-24 16:41:54,138 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-24 16:41:54,139 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-24 16:41:54,139 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-24 16:41:54,143 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:41:54,144 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:41:54,144 - sqlalchemy.engine.Engine - INFO - [cached since 0.2148s ago] ('apurva',)
+2025-02-24 16:41:54,147 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-24 16:41:54,380 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:41:54,380 - logging_config - INFO - Response status: 200 for POST http://test/login/
+2025-02-24 16:41:54,380 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 200 OK"
+2025-02-24 16:41:54,380 - logging_config - INFO - Incoming request: POST http://test/students/
+2025-02-24 16:41:54,380 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:41:54,380 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:41:54,380 - sqlalchemy.engine.Engine - INFO - [cached since 0.4623s ago] ('apurva',)
+2025-02-24 16:41:54,398 - sqlalchemy.engine.Engine - INFO - INSERT INTO students (name, age, email) VALUES ($1::VARCHAR, $2::INTEGER, $3::VARCHAR) RETURNING students.id
+2025-02-24 16:41:54,398 - sqlalchemy.engine.Engine - INFO - [generated in 0.00020s] ('Apurva Bidkar', 22, 'apurva@gmail.com')
+2025-02-24 16:41:54,406 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:42:41,590 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-24 16:42:41,590 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:42:41,590 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-24 16:42:41,590 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:42:41,590 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-24 16:42:41,590 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 16:42:41,590 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:42:41,597 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:42:41,598 - sqlalchemy.engine.Engine - INFO - [generated in 0.00094s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:42:41,601 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:42:41,602 - sqlalchemy.engine.Engine - INFO - [cached since 0.004789s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:42:41,602 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:42:41,604 - sqlalchemy.engine.Engine - INFO - [cached since 0.006531s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:42:41,605 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 16:42:41,606 - sqlalchemy.engine.Engine - INFO - [cached since 0.008278s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 16:42:41,607 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-24 16:42:45,518 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-24 16:42:45,520 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-24 16:42:45,592 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-24 16:42:45,613 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-24 16:42:54,426 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/5
+2025-02-24 16:42:54,427 - logging_config - INFO - Response status: 401 for GET http://127.0.0.1:8000/students/5
+2025-02-24 16:43:05,902 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-24 16:43:05,905 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:43:05,913 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:43:05,914 - sqlalchemy.engine.Engine - INFO - [generated in 0.00103s] ('jayesh',)
+2025-02-24 16:43:05,916 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-24 16:43:06,173 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:43:06,173 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-24 16:43:08,676 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/5
+2025-02-24 16:43:08,678 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:43:08,678 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:43:08,679 - sqlalchemy.engine.Engine - INFO - [cached since 2.766s ago] ('jayesh',)
+2025-02-24 16:43:08,681 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-24 16:43:08,683 - sqlalchemy.engine.Engine - INFO - [generated in 0.00109s] (5,)
+2025-02-24 16:43:08,687 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:43:14,620 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/1
+2025-02-24 16:43:14,622 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:43:14,622 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:43:14,623 - sqlalchemy.engine.Engine - INFO - [cached since 8.71s ago] ('jayesh',)
+2025-02-24 16:43:14,625 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-24 16:43:14,625 - sqlalchemy.engine.Engine - INFO - [cached since 5.944s ago] (1,)
+2025-02-24 16:43:14,673 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 16:43:14,673 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/students/1
+2025-02-24 16:43:28,564 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/5
+2025-02-24 16:43:28,565 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 16:43:28,565 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 16:43:28,565 - sqlalchemy.engine.Engine - INFO - [cached since 22.65s ago] ('jayesh',)
+2025-02-24 16:43:28,568 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-24 16:43:28,568 - sqlalchemy.engine.Engine - INFO - [cached since 19.89s ago] (5,)
+2025-02-24 16:43:28,569 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 22:20:07,425 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-24 22:20:07,425 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 22:20:07,425 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-24 22:20:07,425 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 22:20:07,440 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-24 22:20:07,441 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-24 22:20:07,441 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 22:20:07,448 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 22:20:07,450 - sqlalchemy.engine.Engine - INFO - [generated in 0.00190s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 22:20:07,460 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 22:20:07,460 - sqlalchemy.engine.Engine - INFO - [cached since 0.01358s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 22:20:07,464 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 22:20:07,464 - sqlalchemy.engine.Engine - INFO - [cached since 0.01609s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 22:20:07,467 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-24 22:20:07,468 - sqlalchemy.engine.Engine - INFO - [cached since 0.02006s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-24 22:20:07,468 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-24 22:20:31,268 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-24 22:20:31,269 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-24 22:20:31,655 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-24 22:20:31,670 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-24 22:20:57,824 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-24 22:20:57,826 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 22:20:57,833 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 22:20:57,838 - sqlalchemy.engine.Engine - INFO - [generated in 0.00126s] ('apurva',)
+2025-02-24 22:20:57,852 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-24 22:20:58,145 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 22:20:58,145 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-24 22:21:22,767 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/1
+2025-02-24 22:21:22,768 - logging_config - INFO - Response status: 401 for GET http://127.0.0.1:8000/students/1
+2025-02-24 22:21:38,397 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-24 22:21:38,402 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 22:21:38,405 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 22:21:38,406 - sqlalchemy.engine.Engine - INFO - [cached since 40.57s ago] ('apurva',)
+2025-02-24 22:21:38,883 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 22:21:38,889 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-24 22:21:54,030 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/1
+2025-02-24 22:21:54,032 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-24 22:21:54,034 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-24 22:21:54,036 - sqlalchemy.engine.Engine - INFO - [cached since 56.2s ago] ('apurva',)
+2025-02-24 22:21:54,045 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-24 22:21:54,045 - sqlalchemy.engine.Engine - INFO - [generated in 0.00241s] (1,)
+2025-02-24 22:21:54,128 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-24 22:21:54,128 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/students/1
+2025-02-27 22:33:48,808 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-27 22:33:48,808 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-27 22:33:48,808 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-27 22:33:48,808 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-27 22:33:48,825 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-27 22:33:48,826 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-27 22:33:48,827 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-27 22:33:48,827 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-27 22:33:48,838 - sqlalchemy.engine.Engine - INFO - [generated in 0.00594s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-27 22:33:48,852 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-27 22:33:48,855 - sqlalchemy.engine.Engine - INFO - [cached since 0.01818s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-27 22:33:48,855 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-27 22:33:48,859 - sqlalchemy.engine.Engine - INFO - [cached since 0.023s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-27 22:33:48,859 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-27 22:33:48,866 - sqlalchemy.engine.Engine - INFO - [cached since 0.02928s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-27 22:33:48,868 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-27 22:33:52,834 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-27 22:33:52,837 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-27 22:33:53,425 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-27 22:33:53,460 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-27 22:34:47,202 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/register/
+2025-02-27 22:34:47,223 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-27 22:34:47,289 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-27 22:34:47,303 - sqlalchemy.engine.Engine - INFO - [generated in 0.00284s] ('sharvari',)
+2025-02-27 22:34:47,323 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-27 22:34:47,843 - sqlalchemy.engine.Engine - INFO - INSERT INTO users (username, email, hashed_password) VALUES ($1::VARCHAR, $2::VARCHAR, $3::VARCHAR) RETURNING users.id
+2025-02-27 22:34:47,856 - sqlalchemy.engine.Engine - INFO - [generated in 0.00175s] ('sharvari', 'sharu@gmail.com', '$2b$12$/aDtAkwsvq1VYyDwBT8faepLhnzo2ADP2rNLcTI5JJ70Z3KhhvQja')
+2025-02-27 22:34:47,869 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-27 22:34:47,869 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-27 22:34:47,869 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.id = $1::INTEGER
+2025-02-27 22:34:47,884 - sqlalchemy.engine.Engine - INFO - [generated in 0.00275s] (3,)
+2025-02-27 22:34:47,889 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-27 22:34:47,891 - logging_config - INFO - Response status: 201 for POST http://127.0.0.1:8000/register/
+2025-02-27 22:35:36,416 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-27 22:35:36,430 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-27 22:35:36,430 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-27 22:35:36,436 - sqlalchemy.engine.Engine - INFO - [cached since 49.14s ago] ('sharvari',)
+2025-02-27 22:35:36,898 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-27 22:35:36,914 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-27 22:36:24,316 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-27 22:36:24,320 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-27 22:36:24,320 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-27 22:36:24,323 - sqlalchemy.engine.Engine - INFO - [cached since 97.02s ago] ('sharvari',)
+2025-02-27 22:36:24,805 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-27 22:36:24,805 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-27 22:37:25,273 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/students/
+2025-02-27 22:37:25,273 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-27 22:37:25,278 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-27 22:37:25,279 - sqlalchemy.engine.Engine - INFO - [cached since 158s ago] ('sharvari',)
+2025-02-27 22:37:25,293 - sqlalchemy.engine.Engine - INFO - INSERT INTO students (name, age, email) VALUES ($1::VARCHAR, $2::INTEGER, $3::VARCHAR) RETURNING students.id
+2025-02-27 22:37:25,295 - sqlalchemy.engine.Engine - INFO - [generated in 0.00223s] ('Angad Joshi', 20, 'angadj@gmail.com')
+2025-02-27 22:37:25,312 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-27 22:37:25,314 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-27 22:37:25,316 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-27 22:37:25,320 - sqlalchemy.engine.Engine - INFO - [generated in 0.00214s] (9,)
+2025-02-27 22:37:25,321 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-27 22:37:25,321 - logging_config - INFO - Response status: 201 for POST http://127.0.0.1:8000/students/
+2025-02-27 22:37:52,521 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/enrollments/
+2025-02-27 22:37:52,526 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-27 22:37:52,527 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-27 22:37:52,528 - sqlalchemy.engine.Engine - INFO - [cached since 185.2s ago] ('sharvari',)
+2025-02-27 22:37:52,543 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-27 22:37:52,543 - sqlalchemy.engine.Engine - INFO - [generated in 0.00295s] (9,)
+2025-02-27 22:37:52,555 - sqlalchemy.engine.Engine - INFO - SELECT courses.id, courses.title, courses.description 
+FROM courses 
+WHERE courses.id = $1::INTEGER
+2025-02-27 22:37:52,555 - sqlalchemy.engine.Engine - INFO - [generated in 0.00212s] (3,)
+2025-02-27 22:37:52,569 - sqlalchemy.engine.Engine - INFO - SELECT enrollments.id, enrollments.student_id, enrollments.course_id 
+FROM enrollments 
+WHERE enrollments.student_id = $1::INTEGER AND enrollments.course_id = $2::INTEGER
+2025-02-27 22:37:52,577 - sqlalchemy.engine.Engine - INFO - [generated in 0.00295s] (9, 3)
+2025-02-27 22:37:52,577 - sqlalchemy.engine.Engine - INFO - INSERT INTO enrollments (student_id, course_id) VALUES ($1::INTEGER, $2::INTEGER) RETURNING enrollments.id
+2025-02-27 22:37:52,577 - sqlalchemy.engine.Engine - INFO - [generated in 0.00173s] (9, 3)
+2025-02-27 22:37:52,591 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-27 22:37:52,591 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-27 22:37:52,591 - sqlalchemy.engine.Engine - INFO - SELECT enrollments.id, enrollments.student_id, enrollments.course_id 
+FROM enrollments 
+WHERE enrollments.id = $1::INTEGER
+2025-02-27 22:37:52,591 - sqlalchemy.engine.Engine - INFO - [generated in 0.00213s] (4,)
+2025-02-27 22:37:52,607 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-27 22:37:52,607 - logging_config - INFO - Response status: 201 for POST http://127.0.0.1:8000/enrollments/
+2025-02-28 08:35:08,773 - logging_config - INFO - Incoming request: GET http://test/
+2025-02-28 08:35:08,773 - logging_config - INFO - Response status: 200 for GET http://test/
+2025-02-28 08:35:08,773 - httpx - INFO - HTTP Request: GET http://test/ "HTTP/1.1 200 OK"
+2025-02-28 08:35:08,781 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-28 08:35:08,794 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-28 08:35:08,796 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-28 08:35:08,796 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-28 08:35:09,094 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 08:35:09,094 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 08:35:09,106 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 08:35:09,106 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 08:35:09,113 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 08:35:09,113 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 08:35:09,115 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 08:35:09,129 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 08:35:09,131 - sqlalchemy.engine.Engine - INFO - [generated in 0.00128s] ('testuser',)
+2025-02-28 08:35:09,142 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 08:35:09,142 - logging_config - INFO - Response status: 401 for POST http://test/login/
+2025-02-28 08:35:09,142 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 401 Unauthorized"
+2025-02-28 08:35:09,698 - logging_config - INFO - Incoming request: POST http://test/register/
+2025-02-28 08:35:09,700 - logging_config - INFO - Response status: 422 for POST http://test/register/
+2025-02-28 08:35:09,700 - httpx - INFO - HTTP Request: POST http://test/register/ "HTTP/1.1 422 Unprocessable Entity"
+2025-02-28 08:35:09,702 - logging_config - INFO - Incoming request: POST http://test/login/
+2025-02-28 08:35:09,708 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 08:35:09,710 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 08:35:09,710 - sqlalchemy.engine.Engine - INFO - [cached since 0.5811s ago] ('apurva',)
+2025-02-28 08:35:09,722 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-28 08:35:10,245 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 08:35:10,248 - logging_config - INFO - Response status: 200 for POST http://test/login/
+2025-02-28 08:35:10,249 - httpx - INFO - HTTP Request: POST http://test/login/ "HTTP/1.1 200 OK"
+2025-02-28 08:35:10,250 - logging_config - INFO - Incoming request: POST http://test/students/
+2025-02-28 08:35:10,254 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 08:35:10,256 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 08:35:10,257 - sqlalchemy.engine.Engine - INFO - [cached since 1.127s ago] ('apurva',)
+2025-02-28 08:35:10,285 - sqlalchemy.engine.Engine - INFO - INSERT INTO students (name, age, email) VALUES ($1::VARCHAR, $2::INTEGER, $3::VARCHAR) RETURNING students.id
+2025-02-28 08:35:10,285 - sqlalchemy.engine.Engine - INFO - [generated in 0.00067s] ('Apurva Bidkar', 22, 'apurva@gmail.com')
+2025-02-28 08:35:10,305 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 08:57:17,711 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 08:57:17,711 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 08:57:17,711 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 08:57:17,711 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 08:57:17,724 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 08:57:17,725 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 08:57:17,728 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 08:57:17,738 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 08:57:17,741 - sqlalchemy.engine.Engine - INFO - [generated in 0.00334s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 08:57:17,750 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 08:57:17,753 - sqlalchemy.engine.Engine - INFO - [cached since 0.0155s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 08:57:17,755 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 08:57:17,759 - sqlalchemy.engine.Engine - INFO - [cached since 0.02096s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 08:57:17,761 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 08:57:17,764 - sqlalchemy.engine.Engine - INFO - [cached since 0.02588s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 08:57:17,767 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 08:57:27,563 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-28 08:57:27,564 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-28 08:57:28,187 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-28 08:57:28,228 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-28 08:57:42,090 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/
+2025-02-28 08:57:42,091 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/
+2025-02-28 11:00:11,788 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 11:00:11,789 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 11:00:11,791 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 11:00:11,791 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 11:00:11,791 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 11:00:11,794 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 11:00:11,796 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 11:00:11,799 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 11:00:11,800 - sqlalchemy.engine.Engine - INFO - [generated in 0.00094s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 11:00:11,806 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 11:00:11,808 - sqlalchemy.engine.Engine - INFO - [cached since 0.008625s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 11:00:11,808 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 11:00:11,809 - sqlalchemy.engine.Engine - INFO - [cached since 0.01068s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 11:00:11,811 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 11:00:11,812 - sqlalchemy.engine.Engine - INFO - [cached since 0.01289s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 11:00:11,812 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 11:00:21,132 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-28 11:00:21,140 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-28 11:00:21,217 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-28 11:00:21,241 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-28 11:00:26,625 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-28 11:00:26,625 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-28 11:00:26,668 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-28 11:00:26,669 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-28 11:00:42,770 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-28 11:00:42,781 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 11:00:42,787 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 11:00:42,790 - sqlalchemy.engine.Engine - INFO - [generated in 0.00107s] ('apurva',)
+2025-02-28 11:00:42,802 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-28 11:00:43,042 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 11:00:43,053 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-28 11:01:14,769 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/courses/
+2025-02-28 11:01:14,771 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 11:01:14,772 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 11:01:14,773 - sqlalchemy.engine.Engine - INFO - [cached since 31.98s ago] ('apurva',)
+2025-02-28 11:01:14,778 - sqlalchemy.engine.Engine - INFO - INSERT INTO courses (title, description) VALUES ($1::VARCHAR, $2::VARCHAR) RETURNING courses.id
+2025-02-28 11:01:14,778 - sqlalchemy.engine.Engine - INFO - [generated in 0.00087s] ('Marathi', 'Basic words of Marathi')
+2025-02-28 11:01:14,786 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 11:01:14,789 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 11:01:14,791 - sqlalchemy.engine.Engine - INFO - SELECT courses.id, courses.title, courses.description 
+FROM courses 
+WHERE courses.id = $1::INTEGER
+2025-02-28 11:01:14,792 - sqlalchemy.engine.Engine - INFO - [generated in 0.00196s] (4,)
+2025-02-28 11:01:14,797 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 11:01:14,797 - logging_config - INFO - Response status: 201 for POST http://127.0.0.1:8000/courses/
+2025-02-28 11:01:29,374 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/courses/4
+2025-02-28 11:01:29,374 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 11:01:29,375 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 11:01:29,376 - sqlalchemy.engine.Engine - INFO - [cached since 46.59s ago] ('apurva',)
+2025-02-28 11:01:29,379 - sqlalchemy.engine.Engine - INFO - SELECT courses.id, courses.title, courses.description 
+FROM courses 
+WHERE courses.id = $1::INTEGER
+2025-02-28 11:01:29,381 - sqlalchemy.engine.Engine - INFO - [generated in 0.00100s] (4,)
+2025-02-28 11:01:29,383 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 11:01:29,384 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/courses/4
+2025-02-28 11:01:53,157 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/courses/5
+2025-02-28 11:01:53,157 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 11:01:53,157 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 11:01:53,157 - sqlalchemy.engine.Engine - INFO - [cached since 70.37s ago] ('apurva',)
+2025-02-28 11:01:53,157 - sqlalchemy.engine.Engine - INFO - SELECT courses.id, courses.title, courses.description 
+FROM courses 
+WHERE courses.id = $1::INTEGER
+2025-02-28 11:01:53,165 - sqlalchemy.engine.Engine - INFO - [cached since 23.78s ago] (5,)
+2025-02-28 11:01:53,165 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 11:02:06,798 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/courses/2
+2025-02-28 11:02:06,800 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 11:02:06,800 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 11:02:06,801 - sqlalchemy.engine.Engine - INFO - [cached since 84.01s ago] ('apurva',)
+2025-02-28 11:02:06,803 - sqlalchemy.engine.Engine - INFO - SELECT courses.id, courses.title, courses.description 
+FROM courses 
+WHERE courses.id = $1::INTEGER
+2025-02-28 11:02:06,803 - sqlalchemy.engine.Engine - INFO - [cached since 37.42s ago] (2,)
+2025-02-28 11:02:06,804 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 11:02:06,806 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/courses/2
+2025-02-28 11:02:29,497 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/2/courses/
+2025-02-28 11:02:29,498 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 11:02:29,498 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 11:02:29,500 - sqlalchemy.engine.Engine - INFO - [cached since 106.7s ago] ('apurva',)
+2025-02-28 11:02:29,503 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-28 11:02:29,503 - sqlalchemy.engine.Engine - INFO - [generated in 0.00122s] (2,)
+2025-02-28 11:02:29,518 - sqlalchemy.engine.Engine - INFO - SELECT courses.id 
+FROM courses JOIN enrollments ON courses.id = enrollments.course_id 
+WHERE enrollments.student_id = $1::INTEGER
+2025-02-28 11:02:29,518 - sqlalchemy.engine.Engine - INFO - [generated in 0.00104s] (2,)
+2025-02-28 11:02:29,524 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 11:02:29,524 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/students/2/courses/
+2025-02-28 11:02:35,176 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/9/courses/
+2025-02-28 11:02:35,178 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 11:02:35,178 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 11:02:35,178 - sqlalchemy.engine.Engine - INFO - [cached since 112.4s ago] ('apurva',)
+2025-02-28 11:02:35,182 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-28 11:02:35,182 - sqlalchemy.engine.Engine - INFO - [cached since 5.679s ago] (9,)
+2025-02-28 11:02:35,185 - sqlalchemy.engine.Engine - INFO - SELECT courses.id 
+FROM courses JOIN enrollments ON courses.id = enrollments.course_id 
+WHERE enrollments.student_id = $1::INTEGER
+2025-02-28 11:02:35,185 - sqlalchemy.engine.Engine - INFO - [cached since 5.668s ago] (9,)
+2025-02-28 11:02:35,188 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 11:02:35,189 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/students/9/courses/
+2025-02-28 11:02:43,051 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/8/courses/
+2025-02-28 11:02:43,053 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 11:02:43,053 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 11:02:43,053 - sqlalchemy.engine.Engine - INFO - [cached since 120.3s ago] ('apurva',)
+2025-02-28 11:02:43,053 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-28 11:02:43,053 - sqlalchemy.engine.Engine - INFO - [cached since 13.55s ago] (8,)
+2025-02-28 11:02:43,059 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 14:09:35,218 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 14:09:35,218 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 14:09:35,218 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 14:09:35,218 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 14:09:35,218 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 14:09:35,218 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 14:09:35,229 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 14:09:35,233 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 14:09:35,234 - sqlalchemy.engine.Engine - INFO - [generated in 0.00150s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 14:09:35,236 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 14:09:35,240 - sqlalchemy.engine.Engine - INFO - [cached since 0.00642s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 14:09:35,241 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 14:09:35,241 - sqlalchemy.engine.Engine - INFO - [cached since 0.008653s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 14:09:35,243 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 14:09:35,244 - sqlalchemy.engine.Engine - INFO - [cached since 0.01113s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 14:09:35,244 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 14:09:36,446 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-28 14:09:36,446 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-28 14:09:36,804 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-28 14:09:36,817 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-28 14:09:56,974 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-28 14:09:56,979 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 14:09:56,988 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 14:09:56,988 - sqlalchemy.engine.Engine - INFO - [generated in 0.00123s] ('apurva',)
+2025-02-28 14:09:57,000 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-28 14:09:57,254 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 14:09:57,270 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-28 14:59:46,898 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-28 14:59:46,912 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 14:59:46,912 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 14:59:46,913 - sqlalchemy.engine.Engine - INFO - [cached since 2990s ago] ('apurva',)
+2025-02-28 14:59:47,174 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 14:59:47,175 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-28 15:01:52,334 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-28 15:01:52,338 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:01:52,339 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:01:52,340 - sqlalchemy.engine.Engine - INFO - [cached since 3115s ago] ('apurva',)
+2025-02-28 15:01:52,610 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:01:52,618 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-28 15:07:21,288 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:07:21,290 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:07:21,293 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:07:21,294 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:07:21,297 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:07:21,297 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:07:21,300 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:07:21,306 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:21,308 - sqlalchemy.engine.Engine - INFO - [generated in 0.00360s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:21,321 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:21,325 - sqlalchemy.engine.Engine - INFO - [cached since 0.01939s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:21,331 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:21,334 - sqlalchemy.engine.Engine - INFO - [cached since 0.02729s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:21,340 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:21,343 - sqlalchemy.engine.Engine - INFO - [cached since 0.03633s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:21,347 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:07:24,829 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:07:24,832 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:07:24,833 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:07:24,833 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:07:24,834 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:07:24,834 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:07:24,836 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:07:24,844 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:24,847 - sqlalchemy.engine.Engine - INFO - [generated in 0.00166s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:24,852 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:24,852 - sqlalchemy.engine.Engine - INFO - [cached since 0.009059s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:24,857 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:24,859 - sqlalchemy.engine.Engine - INFO - [cached since 0.0135s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:24,860 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:24,866 - sqlalchemy.engine.Engine - INFO - [cached since 0.02123s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:24,866 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:07:28,765 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:07:28,765 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:07:28,765 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:07:28,765 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:07:28,765 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:07:28,765 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:07:28,771 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:07:28,774 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:28,778 - sqlalchemy.engine.Engine - INFO - [generated in 0.00179s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:28,783 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:28,785 - sqlalchemy.engine.Engine - INFO - [cached since 0.009474s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:28,787 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:28,788 - sqlalchemy.engine.Engine - INFO - [cached since 0.01304s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:28,791 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:07:28,792 - sqlalchemy.engine.Engine - INFO - [cached since 0.01666s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:07:28,809 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:08:02,511 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:08:02,512 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:02,512 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:08:02,512 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:02,514 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:08:02,515 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:02,516 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:08:02,521 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:02,524 - sqlalchemy.engine.Engine - INFO - [generated in 0.00192s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:02,529 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:02,532 - sqlalchemy.engine.Engine - INFO - [cached since 0.01028s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:02,536 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:02,538 - sqlalchemy.engine.Engine - INFO - [cached since 0.01656s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:02,541 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:02,542 - sqlalchemy.engine.Engine - INFO - [cached since 0.02019s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:02,543 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:08:06,934 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-28 15:08:06,934 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-28 15:08:07,218 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-28 15:08:07,250 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-28 15:08:45,847 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:08:45,852 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:45,855 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:08:45,855 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:45,861 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:08:45,861 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:45,863 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:08:45,865 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:45,870 - sqlalchemy.engine.Engine - INFO - [generated in 0.00177s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:45,874 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:45,877 - sqlalchemy.engine.Engine - INFO - [cached since 0.008053s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:45,879 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:45,881 - sqlalchemy.engine.Engine - INFO - [cached since 0.01298s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:45,884 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:45,886 - sqlalchemy.engine.Engine - INFO - [cached since 0.01749s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:45,887 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:08:50,394 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:08:50,394 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:50,396 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:08:50,397 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:50,398 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:08:50,398 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:50,398 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:08:50,405 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:50,407 - sqlalchemy.engine.Engine - INFO - [generated in 0.00178s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:50,412 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:50,414 - sqlalchemy.engine.Engine - INFO - [cached since 0.009346s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:50,416 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:50,417 - sqlalchemy.engine.Engine - INFO - [cached since 0.01268s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:50,419 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:50,420 - sqlalchemy.engine.Engine - INFO - [cached since 0.01536s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:50,420 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:08:52,574 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:08:52,574 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:52,576 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:08:52,576 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:52,581 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:08:52,581 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:08:52,583 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:08:52,587 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:52,589 - sqlalchemy.engine.Engine - INFO - [generated in 0.00164s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:52,595 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:52,596 - sqlalchemy.engine.Engine - INFO - [cached since 0.009263s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:52,599 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:52,600 - sqlalchemy.engine.Engine - INFO - [cached since 0.01263s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:52,602 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:08:52,603 - sqlalchemy.engine.Engine - INFO - [cached since 0.01554s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:08:52,605 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:09:04,278 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:09:04,280 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:09:04,283 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:09:04,284 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:09:04,289 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:09:04,290 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:09:04,293 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:09:04,300 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:09:04,300 - sqlalchemy.engine.Engine - INFO - [generated in 0.00186s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:09:04,309 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:09:04,309 - sqlalchemy.engine.Engine - INFO - [cached since 0.01018s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:09:04,313 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:09:04,317 - sqlalchemy.engine.Engine - INFO - [cached since 0.01745s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:09:04,324 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:09:04,326 - sqlalchemy.engine.Engine - INFO - [cached since 0.02577s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:09:04,330 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:09:07,273 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:09:07,273 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:09:07,273 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:09:07,273 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:09:07,273 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:09:07,273 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:09:07,278 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:09:07,282 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:09:07,282 - sqlalchemy.engine.Engine - INFO - [generated in 0.00116s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:09:07,287 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:09:07,289 - sqlalchemy.engine.Engine - INFO - [cached since 0.008385s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:09:07,290 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:09:07,292 - sqlalchemy.engine.Engine - INFO - [cached since 0.01088s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:09:07,294 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:09:07,295 - sqlalchemy.engine.Engine - INFO - [cached since 0.01389s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:09:07,297 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:09:10,297 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-28 15:09:10,297 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-28 15:09:10,473 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-28 15:09:10,505 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-28 15:11:37,593 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/students/
+2025-02-28 15:11:37,595 - logging_config - INFO - Response status: 401 for POST http://127.0.0.1:8000/students/
+2025-02-28 15:11:54,569 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-28 15:11:54,579 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:11:54,592 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password, users.tests 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:11:54,593 - sqlalchemy.engine.Engine - INFO - [generated in 0.00178s] ('apurva',)
+2025-02-28 15:11:54,602 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:11:59,794 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/students/
+2025-02-28 15:11:59,795 - logging_config - INFO - Response status: 401 for POST http://127.0.0.1:8000/students/
+2025-02-28 15:12:12,041 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-28 15:12:12,043 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:12:12,044 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password, users.tests 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:12:12,045 - sqlalchemy.engine.Engine - INFO - [cached since 17.45s ago] ('apurva',)
+2025-02-28 15:12:12,048 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:12:32,956 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:12:32,956 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:12:32,956 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:12:32,956 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:12:32,956 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:12:32,956 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:12:32,956 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:12:32,966 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:12:32,968 - sqlalchemy.engine.Engine - INFO - [generated in 0.00117s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:12:32,972 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:12:32,976 - sqlalchemy.engine.Engine - INFO - [cached since 0.009234s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:12:32,978 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:12:32,979 - sqlalchemy.engine.Engine - INFO - [cached since 0.01276s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:12:32,980 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:12:32,981 - sqlalchemy.engine.Engine - INFO - [cached since 0.0153s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:12:32,982 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:12:39,424 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:12:39,424 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:12:39,428 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:12:39,429 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:12:39,429 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:12:39,431 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:12:39,431 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:12:39,437 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:12:39,438 - sqlalchemy.engine.Engine - INFO - [generated in 0.00152s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:12:39,438 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:12:39,438 - sqlalchemy.engine.Engine - INFO - [cached since 0.005756s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:12:39,438 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:12:39,438 - sqlalchemy.engine.Engine - INFO - [cached since 0.008181s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:12:39,438 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:12:39,446 - sqlalchemy.engine.Engine - INFO - [cached since 0.01032s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:12:39,449 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:12:39,961 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/docs
+2025-02-28 15:12:39,961 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/docs
+2025-02-28 15:12:40,093 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/openapi.json
+2025-02-28 15:12:40,117 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-02-28 15:12:48,502 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/login/
+2025-02-28 15:12:48,507 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:12:48,513 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:12:48,514 - sqlalchemy.engine.Engine - INFO - [generated in 0.00110s] ('apurva',)
+2025-02-28 15:12:48,535 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\project\final_project\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-28 15:12:48,816 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:12:48,818 - logging_config - INFO - Response status: 200 for POST http://127.0.0.1:8000/login/
+2025-02-28 15:13:21,424 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/students/
+2025-02-28 15:13:21,428 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:13:21,429 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:13:21,430 - sqlalchemy.engine.Engine - INFO - [cached since 32.92s ago] ('apurva',)
+2025-02-28 15:13:21,822 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:13:21,827 - sqlalchemy.engine.Engine - INFO - INSERT INTO students (name, age, email) VALUES ($1::VARCHAR, $2::INTEGER, $3::VARCHAR) RETURNING students.id
+2025-02-28 15:13:21,828 - sqlalchemy.engine.Engine - INFO - [generated in 0.00118s] ('Ragini Bidkar', 20, 'ragini@gmail.com')
+2025-02-28 15:13:21,842 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:13:21,847 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:13:21,851 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-28 15:13:21,852 - sqlalchemy.engine.Engine - INFO - [generated in 0.00147s] (11,)
+2025-02-28 15:13:21,857 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:13:21,858 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:13:21,859 - logging_config - INFO - Response status: 201 for POST http://127.0.0.1:8000/students/
+2025-02-28 15:14:04,598 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/11
+2025-02-28 15:14:04,601 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:14:04,602 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:14:04,603 - sqlalchemy.engine.Engine - INFO - [cached since 76.09s ago] ('apurva',)
+2025-02-28 15:14:04,605 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:14:04,607 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-28 15:14:04,608 - sqlalchemy.engine.Engine - INFO - [generated in 0.00121s] (11,)
+2025-02-28 15:14:04,612 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:14:04,614 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:14:04,615 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/students/11
+2025-02-28 15:14:36,170 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/courses/
+2025-02-28 15:14:36,173 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:14:36,174 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:14:36,176 - sqlalchemy.engine.Engine - INFO - [cached since 107.7s ago] ('apurva',)
+2025-02-28 15:14:36,179 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:14:36,181 - sqlalchemy.engine.Engine - INFO - INSERT INTO courses (title, description) VALUES ($1::VARCHAR, $2::VARCHAR) RETURNING courses.id
+2025-02-28 15:14:36,181 - sqlalchemy.engine.Engine - INFO - [generated in 0.00093s] ('python', 'basics of python')
+2025-02-28 15:14:36,198 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:14:36,201 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:14:36,202 - sqlalchemy.engine.Engine - INFO - SELECT courses.id, courses.title, courses.description 
+FROM courses 
+WHERE courses.id = $1::INTEGER
+2025-02-28 15:14:36,202 - sqlalchemy.engine.Engine - INFO - [generated in 0.00094s] (5,)
+2025-02-28 15:14:36,207 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:14:36,209 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:14:36,210 - logging_config - INFO - Response status: 201 for POST http://127.0.0.1:8000/courses/
+2025-02-28 15:14:48,393 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/courses/5
+2025-02-28 15:14:48,395 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:14:48,395 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:14:48,397 - sqlalchemy.engine.Engine - INFO - [cached since 119.9s ago] ('apurva',)
+2025-02-28 15:14:48,400 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:14:48,401 - sqlalchemy.engine.Engine - INFO - SELECT courses.id, courses.title, courses.description 
+FROM courses 
+WHERE courses.id = $1::INTEGER
+2025-02-28 15:14:48,402 - sqlalchemy.engine.Engine - INFO - [generated in 0.00089s] (5,)
+2025-02-28 15:14:48,404 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:14:48,406 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:14:48,406 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/courses/5
+2025-02-28 15:15:16,213 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/enrollments/
+2025-02-28 15:15:16,215 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:15:16,216 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:15:16,217 - sqlalchemy.engine.Engine - INFO - [cached since 147.7s ago] ('apurva',)
+2025-02-28 15:15:16,223 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:15:16,224 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-28 15:15:16,225 - sqlalchemy.engine.Engine - INFO - [cached since 71.62s ago] (11,)
+2025-02-28 15:15:16,229 - sqlalchemy.engine.Engine - INFO - SELECT courses.id, courses.title, courses.description 
+FROM courses 
+WHERE courses.id = $1::INTEGER
+2025-02-28 15:15:16,231 - sqlalchemy.engine.Engine - INFO - [cached since 27.83s ago] (3,)
+2025-02-28 15:15:16,236 - sqlalchemy.engine.Engine - INFO - SELECT enrollments.id, enrollments.student_id, enrollments.course_id 
+FROM enrollments 
+WHERE enrollments.student_id = $1::INTEGER AND enrollments.course_id = $2::INTEGER
+2025-02-28 15:15:16,238 - sqlalchemy.engine.Engine - INFO - [generated in 0.00188s] (11, 3)
+2025-02-28 15:15:16,246 - sqlalchemy.engine.Engine - INFO - INSERT INTO enrollments (student_id, course_id) VALUES ($1::INTEGER, $2::INTEGER) RETURNING enrollments.id
+2025-02-28 15:15:16,246 - sqlalchemy.engine.Engine - INFO - [generated in 0.00097s] (11, 3)
+2025-02-28 15:15:16,252 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:15:16,254 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:15:16,255 - sqlalchemy.engine.Engine - INFO - SELECT enrollments.id, enrollments.student_id, enrollments.course_id 
+FROM enrollments 
+WHERE enrollments.id = $1::INTEGER
+2025-02-28 15:15:16,257 - sqlalchemy.engine.Engine - INFO - [generated in 0.00110s] (5,)
+2025-02-28 15:15:16,260 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:15:16,261 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:15:16,262 - logging_config - INFO - Response status: 201 for POST http://127.0.0.1:8000/enrollments/
+2025-02-28 15:15:33,282 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/enrollments/
+2025-02-28 15:15:33,283 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:15:33,284 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:15:33,286 - sqlalchemy.engine.Engine - INFO - [cached since 164.8s ago] ('apurva',)
+2025-02-28 15:15:33,288 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:15:33,289 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-28 15:15:33,290 - sqlalchemy.engine.Engine - INFO - [cached since 88.68s ago] (12,)
+2025-02-28 15:15:33,292 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:15:33,293 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:15:52,321 - logging_config - INFO - Incoming request: POST http://127.0.0.1:8000/enrollments/
+2025-02-28 15:15:52,328 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:15:52,329 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:15:52,331 - sqlalchemy.engine.Engine - INFO - [cached since 183.8s ago] ('apurva',)
+2025-02-28 15:15:52,333 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:15:52,334 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-28 15:15:52,335 - sqlalchemy.engine.Engine - INFO - [cached since 107.7s ago] (11,)
+2025-02-28 15:15:52,338 - sqlalchemy.engine.Engine - INFO - SELECT courses.id, courses.title, courses.description 
+FROM courses 
+WHERE courses.id = $1::INTEGER
+2025-02-28 15:15:52,339 - sqlalchemy.engine.Engine - INFO - [cached since 63.94s ago] (9,)
+2025-02-28 15:15:52,340 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:15:52,342 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:17:10,570 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:17:10,576 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:17:10,577 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:17:10,578 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:17:10,578 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:17:10,578 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:17:10,582 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:17:10,587 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:17:10,589 - sqlalchemy.engine.Engine - INFO - [generated in 0.00176s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:17:10,592 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:17:10,595 - sqlalchemy.engine.Engine - INFO - [cached since 0.007708s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:17:10,596 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:17:10,597 - sqlalchemy.engine.Engine - INFO - [cached since 0.01077s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:17:10,598 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:17:10,600 - sqlalchemy.engine.Engine - INFO - [cached since 0.01359s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:17:10,602 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:32:06,522 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:32:06,523 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:32:06,523 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:32:06,523 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:32:06,523 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:32:06,523 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:32:06,527 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:32:06,531 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:32:06,533 - sqlalchemy.engine.Engine - INFO - [generated in 0.00144s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:32:06,539 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:32:06,541 - sqlalchemy.engine.Engine - INFO - [cached since 0.009187s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:32:06,543 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:32:06,544 - sqlalchemy.engine.Engine - INFO - [cached since 0.01282s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:32:06,546 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:32:06,547 - sqlalchemy.engine.Engine - INFO - [cached since 0.01625s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:32:06,550 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:32:13,838 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-02-28 15:32:13,841 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:32:13,842 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-02-28 15:32:13,842 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:32:13,842 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-02-28 15:32:13,842 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-02-28 15:32:13,842 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:32:13,852 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:32:13,853 - sqlalchemy.engine.Engine - INFO - [generated in 0.00135s] ('students', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:32:13,855 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:32:13,856 - sqlalchemy.engine.Engine - INFO - [cached since 0.005478s ago] ('courses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:32:13,858 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:32:13,858 - sqlalchemy.engine.Engine - INFO - [cached since 0.007685s ago] ('enrollments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:32:13,862 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2025-02-28 15:32:13,864 - sqlalchemy.engine.Engine - INFO - [cached since 0.0127s ago] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2025-02-28 15:32:13,866 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-02-28 15:33:41,450 - logging_config - INFO - Incoming request: GET http://127.0.0.1:8000/students/11
+2025-02-28 15:33:41,454 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:33:41,470 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.username, users.email, users.hashed_password 
+FROM users 
+WHERE users.username = $1::VARCHAR
+2025-02-28 15:33:41,471 - sqlalchemy.engine.Engine - INFO - [generated in 0.00191s] ('apurva',)
+2025-02-28 15:33:41,748 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-02-28 15:33:41,752 - sqlalchemy.engine.Engine - INFO - SELECT students.id, students.name, students.age, students.email 
+FROM students 
+WHERE students.id = $1::INTEGER
+2025-02-28 15:33:41,753 - sqlalchemy.engine.Engine - INFO - [generated in 0.00160s] (11,)
+2025-02-28 15:33:41,772 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:33:41,773 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-02-28 15:33:41,776 - logging_config - INFO - Response status: 200 for GET http://127.0.0.1:8000/students/11
